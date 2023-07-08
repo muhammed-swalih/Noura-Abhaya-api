@@ -2,9 +2,14 @@ import mongoose from "mongoose";
 const {Schema} = mongoose
 
 const AuthSchema = new Schema({
-    username : {
+    firstName : {
         type : String,
         required: true,
+        unique : true
+    },
+    lastName : {
+        type : String,
+        required : true,
         unique : true
     },
     email : {

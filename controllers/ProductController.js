@@ -5,6 +5,7 @@ export const addProducts = (async(req,res)=> {
     const newProduct = new ProductModel({
         productName : req.body.productName,
         description : req.body.description,
+        price : req.body.price,
         rating : req.body.rating
     })
 

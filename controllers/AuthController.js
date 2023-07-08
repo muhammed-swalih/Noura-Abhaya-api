@@ -8,7 +8,8 @@ export const registerUser = (async(req,res)=>{
     const hash = bcrypt.hashSync(req.body.password, salt);
   
     const newUser = new AuthModel({
-      username: req.body.username,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
       password: hash,
     });
